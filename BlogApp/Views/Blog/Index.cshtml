@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Yazılar";
+}
+
+@model IEnumerable<BlogApp.Models.BlogPost>
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var post in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="@post.ImageUrl" class="card-img-top" alt="@post.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@post.Title</h5>
+                        <p class="card-text">@post.Summary</p>
+                        <a href="#" class="btn btn-primary">Devamını Oku</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

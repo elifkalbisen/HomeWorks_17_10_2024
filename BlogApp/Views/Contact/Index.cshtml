@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "İletişim"; // Sayfa başlığı
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">İletişim</h1>
+
+    <form asp-action="Send" method="post" class="mt-4">
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Ad Soyad</label>
+            <input type="text" id="fullName" name="fullName" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Konu</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mesaj</label>
+            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+</div>
